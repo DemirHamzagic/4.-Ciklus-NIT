@@ -1,0 +1,44 @@
+.postPage {
+	margin: 5rem;
+	margin-top: 3rem;
+}
+
+.postTitleDiv {
+	background-color: rgb(255, 240, 212);
+	box-shadow: 0 0.7rem 1rem rgb(180, 147, 88);
+	overflow-wrap: break-word;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	padding-top: 1rem;
+
+}
+
+.postDescDiv {
+	background-color: rgb(255, 240, 212);
+	box-shadow: 0 0.7rem 1rem rgb(180, 147, 88);
+	border-radius: 1rem;
+}
+
+.postDescText {
+	padding: 1rem 0.5rem 1rem 0.5rem;
+	overflow-wrap: break-word;
+}
+
+.postCloseButton {
+	background-color: rgb(255, 240, 212);
+	box-shadow: 0 0 0.5rem rgb(193, 173, 138);
+	border-radius: 100%;
+	height: 2rem;
+	width: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+	transition: 0.15s ease-in;
+}
+
+.postCloseButton:hover {
+	height: 2.2rem;
+	width: 2.2rem;
+	color: orangered;
+}

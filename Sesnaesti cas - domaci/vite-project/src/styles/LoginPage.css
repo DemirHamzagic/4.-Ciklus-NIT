@@ -1,0 +1,89 @@
+.loginPage {
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loginForm {
+	background-color: rgb(255, 240, 212);
+	box-shadow: 0 0.7rem 1rem rgb(180, 147, 88);
+	display: flex;
+	flex-direction: column;
+	width: 20rem;
+	height: 20rem;
+	text-align: left;
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+.inputHeader {
+	color: rgb(105, 96, 80);
+	margin-top: 0.7rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 0.3rem;
+}
+
+.loginTitle {
+	text-align: center;
+	margin: 0;
+	color: rgb(105, 96, 80);
+}
+
+.loginEmailInput {
+	height: 2rem;
+	border: none;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.3rem 0.8rem rgb(180, 147, 88);
+	padding-left: 0.5rem;
+	transition: 0.2s;
+}
+
+.loginEmailInput:hover {
+	height: 2.2rem;
+}
+
+.loginPasswordInput {
+	height: 2rem;
+	border: none;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.3rem 0.8rem rgb(180, 147, 88);
+	padding-left: 0.5rem;
+	transition: 0.2s;
+}
+
+.loginPasswordInput:hover {
+	height: 2.2rem;
+}
+
+.loginButton {
+	margin-top: 2.5rem;
+	background-color: rgb(234, 213, 177);
+	border: none;
+	border-radius: 0.7rem;
+	height: 2.5rem;
+	color: rgb(105, 96, 80);
+	font-size: 1rem;
+	font-weight: bold;
+	transition: 0.15s;
+}
+
+.loginButton:hover {
+	height: 2.8rem;
+	background-color: rgb(206, 187, 156);
+}
+
+.loginFailedText {
+	color: red;
+	margin-top: 0.2rem;
+}
+
+.loginLink {
+	margin-top: 0.2rem;
+	color: black;
+}
+
+.loginLink:hover {
+	color: orangered;
+}
