@@ -5,7 +5,6 @@ export const register = (userData) => {
 };
 
 export const login = ({ email, password }) => {
-	console.log(email, password);
 	return api.post("/auth/login", { email, password });
 };
 

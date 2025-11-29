@@ -12,7 +12,6 @@ export const LoginPage = () => {
 	const handleLogin = async (e) => {
 		e.preventDefault();
 		try {
-			console.log(email, password);
 			const response = await login({ email, password });
 
 			localStorage.setItem("accessToken", response.data.accessToken);
@@ -23,7 +22,7 @@ export const LoginPage = () => {
 			navige("/home");
 		} catch (err) {
 			console.log("Greska", err);
-			setMessage("Unesite ispravne podatke");
+			setMessage(err.response?.data?.message || "Greska pokusaj mponovo");
 		}
 	};
 

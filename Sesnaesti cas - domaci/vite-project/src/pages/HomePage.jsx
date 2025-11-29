@@ -9,9 +9,6 @@ export const HomePage = () => {
 			<div className="newsContainer">
 				<HomeNewsDiv />
 			</div>
-			<h1 className="postHeader">
-				Svi postovi<span>(67)</span>
-			</h1>
 			<HomePosts />
 		</div>
 	);

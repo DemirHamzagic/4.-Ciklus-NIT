@@ -1,38 +1,36 @@
 import "../../styles/HomePage.css";
+import { fetchPosts } from "../../api/services/postService";
+import { useEffect, useState } from "react";
+
 export const HomePosts = () => {
-	const news = [
-		{
-			title: "Vest1",
-			description: "blablabla1",
-		},
-		{
-			title: "Vest2",
-			description:
-				"loremsakdoksadkaosfjgfjwoijdjwajdwadijaoiwjdijwqijdoiwajdijwaloremsakdoksadkaosfjgfjwoijdjwajdwadijaoiwjdijwqijdoiwajdijwaloremsakdoksadkaosfjgfjwoijdjwajdwadijaoiwjdijwqijdoiwajdijwaloremsakdoksadkaosfjgfjwoijdjwajdwadijaoiwjdijwqijdoiwajdijwaloremsakdoksadkaosfjgfjwoijdjwajdwadijaoiwjdijwqijdoiwajdijwa",
-		},
-		{
-			title: "Vest3",
-			description: "blablabla3",
-		},
-		{
-			title: "Vest4",
-			description: "blablabla4",
-		},
-		{
-			title: "Vest5",
-			description: "blablabla5",
-		},
-	];
+	const [post, setPost] = useState([]);
+	useEffect(() => {
+		const getPosts = async () => {
+			try {
+				const posts = await fetchPosts();
+				console.log("Uspenso ucitavanje postova", posts.data);
+				setPost(posts.data);
+			} catch (err) {
+				console.log("Greska prilikom prikazivanja postova", err);
+			}
+		};
+		getPosts();
+	}, []);
 	return (
-		<div className="postContainer">
-			{news.map((el, index) => {
-				return (
-					<div key={index} className="postDiv">
-						<h1 className="postTitle">{el.title}</h1>
-						<p className="postDesc">{el.description}</p>
-					</div>
-				);
-			})}
+		<div>
+			<h1 className="postHeader">
+				Svi postovi<span>({post.length})</span>
+			</h1>
+			<div className="postContainer">
+				{post.map((el, index) => {
+					return (
+						<div key={index} className="postDiv">
+							<h1 className="postTitle">{el.title}</h1>
+							<p className="postDesc">{el.description}</p>
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 };
